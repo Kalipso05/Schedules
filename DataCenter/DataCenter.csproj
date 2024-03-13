@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25C7362C-21E8-4C14-B101-7409C5D1905C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataCenter</RootNamespace>
+    <AssemblyName>DataCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Model\Bed.cs" />
+    <Compile Include="Model\CodeHospitalization.cs" />
+    <Compile Include="Model\dbModel.cs" />
+    <Compile Include="Model\DiseaseHistory.cs" />
+    <Compile Include="Model\Gender.cs" />
+    <Compile Include="Model\Hospitalization.cs" />
+    <Compile Include="Model\InsuranseCompany.cs" />
+    <Compile Include="Model\InsuransePolicy.cs" />
+    <Compile Include="Model\MedicalCard.cs" />
+    <Compile Include="Model\Passport.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\PatientData.cs" />
+    <Compile Include="Model\PatientDTO.cs" />
+    <Compile Include="Model\Permissions.cs" />
+    <Compile Include="Model\Prescription.cs" />
+    <Compile Include="Model\Referrals.cs" />
+    <Compile Include="Model\ReferralsService.cs" />
+    <Compile Include="Model\ResultEvent.cs" />
+    <Compile Include="Model\RolePermissions.cs" />
+    <Compile Include="Model\Roles.cs" />
+    <Compile Include="Model\ScheduleChanges.cs" />
+    <Compile Include="Model\ScheduleDTO.cs" />
+    <Compile Include="Model\ScheduleEvents.cs" />
+    <Compile Include="Model\Schedules.cs" />
+    <Compile Include="Model\ScheduleTemplates.cs" />
+    <Compile Include="Model\SecurityAccessLog.cs" />
+    <Compile Include="Model\Speciality.cs" />
+    <Compile Include="Model\TherapeuticDiagnosticMeasures.cs" />
+    <Compile Include="Model\TypeEvent.cs" />
+    <Compile Include="Model\TypeHospitalization.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\Ward.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
